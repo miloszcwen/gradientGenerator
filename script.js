@@ -4,6 +4,8 @@ const text = document.querySelector("#text"); //id
 const body = document.querySelector("body"); //tag
 const random = document.querySelector(".random");
 const gradientValues = [];
+const ul = document.getElementById("ul");
+
 
 
 color1.addEventListener("input", setBgGradient);
@@ -13,14 +15,14 @@ random.addEventListener("click", generateRandomBg);
 setBgGradient();
 
 function setBgGradient (){
-	body.style.background = "linear-gradient(to right bottom, "
+	body.style.backgroundImage = "linear-gradient(to right bottom, "
 	+color1.value+", "+color2.value+")";
 	writeGradientOnScreen();
 	storeGradientValues();
 }
 
 function writeGradientOnScreen (){
-		text.textContent = body.style.background + ";";
+		text.textContent = "backgroundImage: "+ body.style.backgroundImage + ";";
 }
 
 function generateRandomBg (){
@@ -31,7 +33,8 @@ function generateRandomBg (){
 
 function storeGradientValues(){
 	gradientValues.push({c1: color1.value, c2: color2.value});
-	console.log(gradientValues);
+	addListEl(color1.value, color2.value);
+
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -45,11 +48,6 @@ const modalText = document.querySelector("#modal-text")
 openModalButton.addEventListener("click", () => {
   modal.classList.add("open")
   overlay.classList.add("open")
-  gradientValues.forEach((val)=>{
-	console.log(val)
-	modalText.textContent+=JSON.stringify(val);
-  })
-
 })
 
 closeModalButton.addEventListener("click", closeModal)
@@ -62,3 +60,24 @@ function closeModal() {
 }
 
 //////////////////////////////////////////////////////////////////////////////
+
+function addListEl (c1, c2){
+	const li = document.createElement("li");
+	li.className="li";
+	ul.appendChild(li)
+	addDivBox(c1, c2, li);
+}
+function addDivBox(c1, c2, li){
+	const box = document.createElement("div");
+	box.className="box";
+	box.style.backgroundImage = "linear-gradient(to right bottom, "+c1+", "+c2+")";
+	li.appendChild(box);
+	addDelBtn(box);
+}
+
+function addDelBtn (box){
+	const btn = document.createElement("button");
+	btn.className="del";
+	btn.appendChild(document.createTextNode("delete"));
+	box.appendChild(btn);
+}
