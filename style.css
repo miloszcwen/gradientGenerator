@@ -14,6 +14,8 @@
 	padding: 1rem;
 	border-radius: .25rem;
 	background-color: white;
+	overflow-y: auto;
+	max-height: 80vh;
   }
 
   #overlay {
@@ -24,6 +26,13 @@
 	right: 0;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, .7);
+  }
+  #modal.open {
+	display: block;
+  }
+
+  #overlay.open {
+	display: block;
   }
 
 body{
@@ -69,13 +78,7 @@ div{
 	align-items: center;
 
 }
-  #modal.open {
-	display: block;
-  }
 
-  #overlay.open {
-	display: block;
-  }
   ul{
 	  list-style: none;
 	  display: flex;

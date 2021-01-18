@@ -80,4 +80,10 @@ function addDelBtn (box){
 	btn.className="del";
 	btn.appendChild(document.createTextNode("delete"));
 	box.appendChild(btn);
+	btn.addEventListener("click", deleteBox);
+
+}
+function deleteBox(){
+		event.target.parentNode.remove();
+
 }
