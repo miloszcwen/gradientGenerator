@@ -1,4 +1,4 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	color: rgba(0,0,0,.5);
@@ -16,9 +16,9 @@
 	background-color: white;
 	overflow-y: auto;
 	max-height: 80vh;
-  }
+}
 
-  #overlay {
+#overlay {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -26,16 +26,17 @@
 	right: 0;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, .7);
-  }
-  #modal.open {
-	display: block;
-  }
+}
 
-  #overlay.open {
+#modal.open {
 	display: block;
-  }
+}
 
-body{
+#overlay.open {
+	display: block;
+}
+
+body {
 	height: 100vh;
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
@@ -47,61 +48,73 @@ body{
 	align-items: center;
 }
 
-h1{
+h1 {
 	padding: 20px;
 	font: 600 2.5em 'Raleway', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .5em;
 }
-h2{
+
+h2 {
 	padding: 20px;
 }
-h3{
+
+h3 {
 	padding: 20px;
 	font: 900 1em 'Raleway', sans-serif;
 	text-align: center;
 	text-transform: none;
 	letter-spacing: 0.01em;
 }
-input{
+
+input {
 	width: 50px;
-	border-radius: 3px;
+	border: solid rgba(0, 0, 0, .7) 1px;
+	border-radius: .15rem;
 }
-button{
+
+button {
+	font-weight: bold;
 	width: 120px;
 	padding: 5px;
 	margin: 20px;
-	border-radius: 3px;
+	border: solid rgba(0, 0, 0, .7) 1px;
+	border-radius: .15rem;
 }
-div{
+
+div {
 	align-items: center;
 
 }
 
-  ul{
+ul {
 	  list-style: none;
 	  display: flex;
 	  flex-direction: row;
 	  flex-wrap: wrap;
 	  justify-content: center;
 
-  }
-li{
+}
+
+li {
 
 }
-  .box {
+
+.box {
 	width: 8em;
 	height: 8em;
 	position: relative;
 	top: 0;
 	right: 0;
-	border: 1px solid black;
+	border: 1.5px solid rgba(0, 0, 0, .7);
+	border-radius: .25rem;
 	background-image: linear-gradient(to right bottom, rgb(138, 72, 219), rgb(193, 26, 82));
 	margin: 0.5em;
 
 }
-.del{
+
+.del {
 	width: 4em;
 	position: absolute;
 	top: -15px;

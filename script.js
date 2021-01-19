@@ -84,6 +84,6 @@ function addDelBtn (box){
 
 }
 function deleteBox(){
-		event.target.parentNode.remove();
+		event.target.parentNode.parentNode.remove();
 
 }
