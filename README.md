@@ -1,6 +1,7 @@
 ## Gradient background generator
 
-Vanilla JS app for generating gradient background.<br>
+Vanilla JS app for generating gradient background.   
+
 Main features:
 * Generate a random background button
 * Color inputs to create a custom background
