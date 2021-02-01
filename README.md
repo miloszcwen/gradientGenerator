@@ -10,4 +10,4 @@ Main features:
 
 [See live](https://miloszcwen.github.io/gradientGenerator/)
 
-https://mcwen.netlify.app/assets/project3.35ebff3ee8468f4b47bdf7f4d4eaf7aa.jpg
+![https://mcwen.netlify.app/assets/project3.35ebff3ee8468f4b47bdf7f4d4eaf7aa.jpg]
